@@ -1,3 +1,4 @@
+import sys
 from img_scaler import scale_image
 from anno_convert import convert
 
@@ -23,3 +24,13 @@ def scaler_convertor(ptd_dataset, scaler_size):
     scale_image(ptd=ptdi, sc=scaler_size)
     print('Json Conversion')
     convert(ptj=ptj, sc=scaler_size)
+ 
+ 
+if __name__ == '__main__':
+    if len (sys.argv) > 1:
+        ptd_dataset = str(sys.argv[1])
+        scalar_size = float(sys.argv[2])
+    else:  
+        ptd_dataset = 'dataset/'
+        scalar_size = 0.5
+    scaler_convertor(ptd_dataset, scalar_size)
