@@ -1,6 +1,8 @@
 # Scaler-coco-Format
 Scaling a data set in COCO format.
 
+The result of the work is a scaled dataset in the source directory with the prefix '_scaler'.
+
 Example for `Jupyter Notebook`:
 ``` Jupyter
 from coco_scaler_convert import scaler_convertor
